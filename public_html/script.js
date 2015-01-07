@@ -5,7 +5,7 @@
  */
 
 $("documents") .ready(function(){
-    $(".a").css("background-color", "yellow");
-    $('p:last').css({"background-color": "red", "color": "blue"});
-    $('p:first').css({"background-color": "purple", "color": "pink"});
+    $(".a").css("background-color", "navy");
+    $('p:last').css({"background-color": "blue", "color": "aqua"});
+    $('p:first').css({"background-color": "green", "color": "lime"});
 });
