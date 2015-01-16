@@ -5,17 +5,26 @@
  */
 
 $("documents") .ready(function(){
+    $('#c > body').hide();
+    $('#c').click(function() {
+        $(this).siblings('p:visible').slideUp('2000');
+        $(this).next().animate({'height':'toggle'}, '2000', 'easeInOutExpo');
+    });
     $(".a").css({"background-color": "navy"});
-    $(".b").css({"background-color": "purple"});
+    $(".b").css({"background-color": "purple", "text-color": "white"});
     $('p:first').css({"background-color": "blue", "color": "aqua", "text-decoration": "underline"});
-    $('p:last').css({"background-color": "green", "color": "lime", "font-style": "italic", "border": "20px solid limegreen"});
+    $("div p:last-child").css({"background-color": "green", "color": "lime", "font-style": "italic", "border": "20px solid limegreen"});
     $("h3").css({"color": "white"});
     $("h4").css({"color": "white"});
+    $('#button1').css({"background-color": "blue"});
     $('#b').css({"background-color": "green", "color": "lime"});
-    $("h3").bind('click', alertButtonClick);
+    $('button1').bind('click', alertButtonClick);
     $("div[class]").css("border", "3px solid black");
+///    $("#").accordian({ header: "h4" });
+    setInterval("slidePix()", 2000);
+
     
-    $('#a').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('#button1').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     $('#1').bind('click', hideTheImage);
     $('#2').bind('click', showTheImage);
     $('#3').bind('click', toggleTheText);
@@ -30,6 +39,8 @@ $("documents") .ready(function(){
     $('#12').bind('click', highlightLogo);
     $('#13').bind('click', pulsateLogo);
     $('#14').bind('click', sizeLogo);
+    $('#Add1').bind('click', addAPara);
+    $('#remove1').bind('click', removeAPara);
     
 });
 
@@ -42,7 +53,7 @@ function mouseOverMe(){
 }
 
 function mouseOutMe(){
-    $('#a').html("Don't Click Me");
+    $('#a').html("Don't Click It");
 }
 
 function mouseClick(){
@@ -101,4 +112,25 @@ function pulsateLogo() {
 
 function sizeLogo() {
     $('#').effect('size', {to: {height: 200, width: 200}});
+}
+
+function addAPara() {
+    $('#Add1').append('<p>Paragraph Added</p>');
+}
+
+function removeAPara() {
+    $('#Add1 p:last').remove('');
+}
+
+function slidePix() {
+    var curPic = $('#flipPix div.active');
+    var nextPic = curPic.next();
+    if (nextPic.length === 0){
+        nextPic = $('#flipPix div:first');
+    }
+    
+    curPic.removeClass('active').addClass('prev');
+    nextPic.css({opacity:0.0}).addClass('active').animate({opacity:1.0}, 2000,  function() {
+        curPic.removeClass('prev');
+    });
 }
