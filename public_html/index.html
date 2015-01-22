@@ -12,13 +12,14 @@ and open the template in the editor.
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+        <!--don't know how to add this to the javascript.-->
         <style>
             h5{
                 background-color: black;
                 color: white;
                 padding: 10px;
             }
-            div c{
+            p #d div{
                 background-color: grey;
                 width: 500px;
                 overflow: hidden;
@@ -54,48 +55,75 @@ and open the template in the editor.
         <div class="a">
             <p>hi</p>
             <h3 id="a">Don't click that</h3>
-            <h3 style="display: none"><img src="img/Villager.png" alt="picture"/></h3>
+            <!--hidden image-->
+            <h3 style="display: none"><img src="img/Meta Knight.png" alt="picture"/></h3>
+            <!--what the name says, a pointless button-->
             <button type="button" id="button1" value="bring back">Pointless button</button>
             <p id="b">hey</p>
+            <!--changes the h3 tag-->
             <h4 id="3">click here!!</h4>
         </div>
         <div class="b">
+            <!--adding and removing paragraph-->
             <p id="remove1">remove a Paragraph?</p>
             <p id="Add1">add A Paragraph?</p>
             <p>last paragraph</p>
+        </div>
+        <div>
+            <img class="" src="img/Villager.png" alt="picture" width="200" height="150">
         </div>
         <p class="a">
             my favorite smash bros characters.
         </p>
         <div id="flipPix">
+            <!--the images in the slideshow-->
             <div class="active">
-                <img src="http://www.smashbros.com/us/images/index/image/character-kirby.png"/>
+                <img src="http://www.smashbros.com/us/images/index/image/character-kirby.png" alt="pic"/>
             </div>
             <div>
-                <img src="http://www.smashbros.com/us/images/index/image/character-metaknight.png"/>
+                <img src="http://www.smashbros.com/us/images/index/image/character-metaknight.png" alt="pic"/>
             </div>
             <div>
-                <img src="http://www.smashbros.com/us/images/index/image/character-ike.png"/>
+                <img src="http://www.smashbros.com/us/images/index/image/character-ike.png" alt="pic"/>
             </div>
             <div>
-                <img src="http://www.smashbros.com/us/images/index/image/character-toon_link.png"/>
+                <img src="http://www.smashbros.com/us/images/index/image/character-toon_link.png" alt="pic"/>
             </div>
+            <!--I don't know why the this image keeps appearing in between pictures-->
             <div>
-                <img src="http://www.smashbros.com/us/images/index/image/character-murabito.png"/>
+                <img src="http://www.smashbros.com/us/images/index/image/character-murabito.png" alt="pic"/>
             </div>
         </div>
+        <!--needs the line breaks to keep from the next line from being behind the pictures-->
         <br /><br /><br /><br /><br />
-       <div id="c">
-            <h5>
-                hi
-            </h5>
-            <h5>
-                hello
-            </h5>
-            <h5>
-                sup
-            </h5>
-        </div>
+        
+       <!--FAILED ACORDIAN-->
+        <p id="d">
+            <div id="c">
+                <!--trying to create an acordian.-->
+                <h5>
+                    hi
+                    <p>hi there</p>
+                </h5>
+                <h5>
+                    hello
+                    <p>hello everyone</p>
+                </h5>
+                <h5>
+                    sup
+                    <p>sup people</p>
+                </h5>
+            </div>
+        </p>
+        <!--music for the webpage-->
         <script type="text/javascript" src="script.js"></script>
+        <audio src="/music/Tetris_A.mp3" controls>	
+	<embed Tetris_A.mp3
+	src="/music/Tetris_A.mp3"
+	width="300"
+	height="90"
+	loop="false"
+	autostart="false" />
+        </audio>
     </body>
 </html>
